@@ -1,17 +1,17 @@
-alphabet = "abcdefjhigklmnoprstuvwxyz"
+ALPHABET = "abcdefjhigklmnoprstuvwxyz"
 
-message = input("Введите строку для шифрования: ")
+messageToEncrypt = input("Введите строку для шифрования: ")
 
 encryptedMessage = ""
 
-for i in message:
-    place = alphabet.find(i)
-    newPlace = (place + 1 + len(alphabet)) % len(alphabet)
+for letter in messageToEncrypt:
+    place = ALPHABET.find(letter)
+    newPlace = (place + 1 + len(ALPHABET)) % len(ALPHABET)
 
-    if i in alphabet:
-        encryptedMessage += alphabet[newPlace]
+    if letter in ALPHABET:
+        encryptedMessage += ALPHABET[newPlace]
     else:
-        encryptedMessage += i
+        encryptedMessage += letter
 
 print(encryptedMessage)
 #реализация самого алгоритма ->
