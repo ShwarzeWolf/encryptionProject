@@ -1,6 +1,6 @@
 alphabet = "abcdefjhigklmnoprstuvwxyz"
 
-message = "hello, world"
+message = input("Введите строку для шифрования: ")
 
 encryptedMessage = ""
 
