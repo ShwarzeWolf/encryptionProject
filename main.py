@@ -6,7 +6,7 @@ encryptedMessage = ""
 
 for i in message:
     place = alphabet.find(i)
-    newPlace = place + 1
+    newPlace = (place + 1 + len(alphabet)) % len(alphabet)
 
     if i in alphabet:
         encryptedMessage += alphabet[newPlace]
